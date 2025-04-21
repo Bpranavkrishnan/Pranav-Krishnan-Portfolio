@@ -19,7 +19,7 @@ const Navbar = () => {
           />
 
           <span className="font-bold ml-[10px] hidden md:block text-gray-300">
-            WebChain Dev
+           Pranav krishnan B - Portfolio
           </span>
         </a>
 
@@ -38,15 +38,24 @@ const Navbar = () => {
         </div>
 
         <div className="flex flex-row gap-5">
-          {Socials.map((social) => (
-            <Image
+            <a
+            href="mailto:bpranavkrishnan@gmail.com"
+            className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-2 rounded-full transition duration-300 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500 before:to-cyan-500 before:blur-md before:opacity-50 before:animate-gradient-flow hover:animate-glow text-sm md:text-base"
+            >
+            <span className="relative z-10">Hire me now !</span>
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 opacity-50 blur-md animate-gradient-flow"></div>
+            </a>
+            {Socials.map((social) => (
+            <a href={social.link} key={social.name} target="_blank" rel="noopener noreferrer" className="flex items-center">
+              <Image
               src={social.src}
               alt={social.name}
-              key={social.name}
-              width={24}
-              height={24}
-            />
-          ))}
+              width={22}
+              height={22}
+              className="translate-y-1"
+              />
+            </a>
+            ))}
         </div>
       </div>
     </div>

@@ -63,6 +63,9 @@
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
+.custom-cursor {
+  mix-blend-mode: difference;
+}
 
 
 

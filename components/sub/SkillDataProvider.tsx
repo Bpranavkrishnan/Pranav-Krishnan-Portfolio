@@ -24,21 +24,37 @@ const SkillDataProvider = ({ src, width, height, index} : Props) => {
 
     const animationDelay = 0.3
   return (
-  <motion.div
-  ref={ref}
-  initial="hidden"
-  variants={imageVariants}
-  animate={inView ? "visible" : "hidden"}
-  custom={index}
-  transition={{delay: index * animationDelay}}
-  >
-    <Image
-src={src}
-width={width}
-height={height}
-alt='skill image'
-    />
-  </motion.div>
+<motion.div
+    ref={ref}
+    initial="hidden"
+    variants={imageVariants}
+    animate={inView ? "visible" : "hidden"}
+    custom={index}
+    transition={{ delay: index * animationDelay }}
+    style={{
+        display: 'inline-block',
+        perspective: 1000,
+    }}
+>
+    <motion.div
+        animate={{
+            rotateX: [0, 15, 0, -15, 0],
+            rotateY: [0, -15, 0, 15, 0],
+        }}
+        transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
+        }}
+    >
+        <Image
+            src={src}
+            width={width}
+            height={height}
+            alt="skill image"
+        />
+    </motion.div>
+</motion.div>
   )
 }
 
