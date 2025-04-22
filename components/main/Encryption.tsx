@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Encryption = () => {
   return (
-    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full translate-y-[-200px] sm:translate-y-[-100px] md:translate-y-0">
+    <div className="flex flex-row relative items-center justify-center min-h-screen w-full h-full translate-y-[-300px] sm:translate-y-[-250px] md:translate-y-[-220px]">
       <div className="absolute w-auto h-auto top-0 z-[5]">
         <motion.div
           variants={slideInFromTop}
@@ -40,26 +40,26 @@ const Encryption = () => {
           />
         </div>
 
-        <div className="Welcome-box px-[10px] sm:px-[12px] md:px-[15px] py-[3px] sm:py-[4px] z-[20] border my-[15px] sm:my-[18px] md:my-[20px] border-[#7042f88b] opacity-[0.9]">
+        <div className="Welcome-box px-[10px] sm:px-[12px] md:px-[15px] py-[3px] sm:py-[4px] z-[20] border my-[10px] sm:my-[12px] md:my-[15px] border-[#7042f88b] opacity-[0.9]">
           <h1 className="Welcome-text text-[10px] sm:text-[11px] md:text-[12px]">
             Encryption
           </h1>
         </div>
       </div>
-      <div className="absolute z-[20] bottom-[-10px] sm:bottom-[-15px] md:bottom-[-20px] px-[5px]">
+      <div className="absolute z-[20] bottom-[10px] sm:bottom-[15px] md:bottom-[20px] px-[5px]">
         <div className="cursive text-[18px] sm:text-[22px] md:text-[25px] font-medium text-center text-gray-300">
           Secure your data with end-to-end encryption
         </div>
       </div>
 
-      <div className="w-full sm:w-[110%] md:w-[130%] flex items-start justify-center absolute">
+      <div className="w-full flex items-start justify-center absolute">
         <video
           loop
           muted
           autoPlay
           playsInline
           preload="false"
-          className="w-full h-full"
+          className="w-full h-full sm:w-[120%] md:w-[130%] sm:rotate-90 md:rotate-0 object-cover"
           src="/encryption.webm"
         />
       </div>

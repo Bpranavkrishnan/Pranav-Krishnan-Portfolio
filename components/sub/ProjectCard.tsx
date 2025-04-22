@@ -10,13 +10,13 @@ interface Props {
 
 const ProjectCard = ({ src, title, description }: Props) => {
   return (
-    <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] max-w-md mx-auto sm:max-w-full sm:w-96 md:w-[28rem]">
+    <div className="relative overflow-hidden rounded-lg shadow-lg border border-[#2A0E61] max-w-md mx-auto sm:max-w-full sm:w-96 md:w-[28rem] transform transition-transform duration-300 hover:scale-105">
       <Image
         src={src}
         alt={typeof title === "string" ? title : ""}
         width={700}
         height={700}
-        className="w-full h-64 object-contain sm:h-72 md:h-80 opacity-70" // Added opacity class
+        className="w-full h-64 object-contain sm:h-72 md:h-80 opacity-70"
         unoptimized
       />
 

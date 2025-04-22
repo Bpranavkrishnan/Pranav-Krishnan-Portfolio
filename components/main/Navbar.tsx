@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="flex flex-row gap-3 md:gap-5 items-center">
           <a
             href="mailto:bpranavkrishnan@gmail.com"
-            className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-full transition duration-300 relative overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500 before:to-cyan-500 before:blur-md before:opacity-50 before:animate-gradient-flow hover:animate-glow text-xs md:text-sm"
+            className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-3 py-1 md:px-4 md:py-2 rounded-full transition duration-300 relative overflow-hidden flex items-center justify-center before:absolute before:inset-0 before:bg-gradient-to-r before:from-purple-500 before:to-cyan-500 before:blur-md before:opacity-50 before:animate-gradient-flow hover:animate-glow text-xs md:text-sm"
           >
             <span className="relative z-10">Hire me now!</span>
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-cyan-500 opacity-50 blur-md animate-gradient-flow"></div>
