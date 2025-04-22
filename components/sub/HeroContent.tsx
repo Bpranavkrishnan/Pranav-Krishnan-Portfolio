@@ -80,7 +80,7 @@ const HeroContent = () => {
       variants={slideInFromLeft(1.2)}
       href="https://drive.google.com/file/d/176IeLjd8siZm-VEmX8_IUQxQbmF3m39y/view?usp=drive_link"
       target="_blank" rel="noopener noreferrer"
-      className="py-3 px-6 button-secondary text-center text-white cursor-pointer rounded-3xl max-w-[300px] bg-gradient-to-r from-purple-500 to-cyan-500"
+      className="py-3 px-6 button-secondary text-center text-white cursor-pointer rounded-3xl w-full max-w-[300px] bg-gradient-to-r from-purple-500 to-cyan-500 sm:w-auto"
       whileHover={{
         scale: 1.1,
         boxShadow: "0px 0px 10px rgba(255, 255, 255, 0.8)",
@@ -97,13 +97,12 @@ const HeroContent = () => {
       {showMore && (
       <motion.div
         variants={slideInFromLeft(0.5)}
-        className="absolute left-0 w-full bg-black bg-opacity-50 flex justify-start items-center p-5"
-        style={{ top: "calc(100% - 135px)" }} // Adjusted position to make it further up
+        className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4"
         onClick={() => setShowMore(false)} // Close on clicking outside
       >
         <motion.div
         variants={slideInFromLeft(0.7)}
-        className="relative bg-transparent p-6 rounded-lg shadow-lg max-w-[98%] md:max-w-[1400px] overflow-hidden"
+        className="relative bg-gray-900 p-6 rounded-lg shadow-lg w-full max-w-[95%] md:max-w-[800px] overflow-y-auto max-h-[90vh]"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
         >
         <button
@@ -134,7 +133,7 @@ const HeroContent = () => {
         delay: index * 0.01,
         }}
         style={{
-        background: "linear-gradient(to right,rgb(94, 193, 226),rgb(94, 193, 226)",
+        background: "linear-gradient(to right, rgb(94, 193, 226), rgb(94, 193, 226))",
         WebkitBackgroundClip: "text",
         WebkitTextFillColor: "transparent",
         }}
